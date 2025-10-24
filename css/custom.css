@@ -524,12 +524,15 @@ header.main-header{
 	border-bottom: 1px solid var(--dark-divider-color);
 	position: relative;
 	z-index: 100;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 header.main-header .header-sticky{
 	position: relative;
 	top: 0;
 	z-index: 100;
+	background-color: rgba(216, 226, 140, 0.95);
+	backdrop-filter: blur(10px);
 }
 
 header.main-header .header-sticky.hide{
@@ -585,6 +588,7 @@ header.main-header .header-sticky.active{
 	color: #000;
 	text-transform: capitalize;
 	transition: all 0.3s ease-in-out;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .main-menu ul li.submenu > a:after{
@@ -673,9 +677,10 @@ header.main-header .header-sticky.active{
 	font-size: 16px;
 	font-weight: 500;
 	text-transform: capitalize;
-	color: var(--white-color);
+	color: var(--primary-color);
 	margin-right: 40px;
 	transition: all 0.3s ease-in-out;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .header-btn .btn-login:hover{
@@ -2322,6 +2327,8 @@ header.main-header .header-sticky.active{
     background-size: cover;
 	padding: 80px 0 0;
 	margin-bottom: 30px;
+	position: relative;
+	z-index: 1;
 }
 
 .footer-logo{
@@ -2373,6 +2380,7 @@ header.main-header .header-sticky.active{
 	border-top: 1px solid var(--dark-divider-color);
 	padding: 40px 0;
 	margin-top: 60px;
+	background-color: rgba(17, 74, 67, 0.8);
 }
 
 .footer-copyright-text p{
@@ -2402,25 +2410,79 @@ header.main-header .header-sticky.active{
 }
 
 .footer-social-links ul li a{
-	border: 1px solid var(--accent-color);
+	border: 2px solid var(--accent-color);
 	color: var(--accent-color);
+	background-color: rgba(216, 226, 140, 0.1);
 	border-radius: 50%;
-	width: 36px;
-	height: 36px;
+	width: 50px;
+	height: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-decoration: none;
 	transition: all 0.3s ease-in-out;
+	position: relative;
 }
 
 .footer-social-links ul li a:hover{
 	border-color: var(--white-color);
 	color: var(--white-color);
+	background-color: var(--accent-color);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px rgba(216, 226, 140, 0.3);
 }
 
 .footer-social-links ul li a i{
 	font-size: 18px;
-	color: inherit
+	color: inherit;
+	display: inline-block;
+	font-weight: 400;
+	line-height: 1;
+	font-family: 'Font Awesome 6 Brands', 'FontAwesome', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: auto;
+}
+
+/* Fallback for missing icons */
+.footer-social-links ul li a i:before {
+	content: attr(data-icon);
+	font-family: 'Font Awesome 6 Brands', 'FontAwesome', sans-serif;
+}
+
+/* Specific icon fallbacks */
+.footer-social-links ul li a .fa-facebook-f:before {
+	content: "\f39e";
+}
+
+.footer-social-links ul li a .fa-twitter:before {
+	content: "\f099";
+}
+
+.footer-social-links ul li a .fa-instagram:before {
+	content: "\f16d";
+}
+
+.footer-social-links ul li a .fa-linkedin-in:before {
+	content: "\f0e1";
+}
+
+/* Ensure icons are visible with proper font loading */
+.footer-social-links ul li a i.fab {
+	font-family: 'Font Awesome 6 Brands' !important;
+	font-weight: 400 !important;
+}
+
+/* Additional fallback for icon visibility */
+.footer-social-links ul li a {
+	min-width: 50px;
+	min-height: 50px;
+}
+
+.footer-social-links ul li a i {
+	width: 18px;
+	height: 18px;
+	text-align: center;
 }
 
 /************************************/
