@@ -1084,6 +1084,15 @@ header.main-header .header-sticky.active{
 	margin-right: 40px;
 }
 
+.marquee-asterisk{
+	width: 12px;
+	height: 12px;
+	margin-right: 8px;
+	vertical-align: middle;
+	filter: brightness(0) invert(1);
+	opacity: 0.8;
+}
+
 @keyframes scroll{
 	from{
 		transform: translateX(0);
@@ -2321,22 +2330,117 @@ header.main-header .header-sticky.active{
 /************************************/
 
 .main-footer.bg-section{
-	background: radial-gradient(39.27% 31.11% at 49.13% 41.46%, rgba(17, 74, 67, 0) 0.01%, #114A43 100%), url(../images/section-bg.svg);
-	background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
+	background: 
+		radial-gradient(39.27% 31.11% at 49.13% 41.46%, rgba(17, 74, 67, 0) 0.01%, #114A43 100%), 
+		linear-gradient(135deg, rgba(17, 74, 67, 0.9) 0%, rgba(17, 74, 67, 0.7) 50%, rgba(17, 74, 67, 0.9) 100%),
+		url(../images/section-bg.svg);
+	background-repeat: no-repeat, no-repeat, repeat;
+    background-position: top center, center, center;
+    background-size: cover, cover, 200px 200px;
 	padding: 80px 0 0;
 	margin-bottom: 30px;
 	position: relative;
 	z-index: 1;
+	overflow: hidden;
+}
+
+/* Footer decorative elements */
+.main-footer.bg-section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: 
+		radial-gradient(circle at 20% 20%, rgba(216, 226, 140, 0.1) 0%, transparent 50%),
+		radial-gradient(circle at 80% 80%, rgba(216, 226, 140, 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.main-footer.bg-section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.01) 25%, transparent 50%, rgba(255, 255, 255, 0.01) 75%, transparent 100%);
+	pointer-events: none;
+	z-index: 0;
+	animation: footerShimmer 8s ease-in-out infinite;
+}
+
+@keyframes footerShimmer {
+	0%, 100% {
+		opacity: 0.3;
+		transform: translateX(-100%);
+	}
+	50% {
+		opacity: 0.6;
+		transform: translateX(100%);
+	}
 }
 
 .footer-logo{
 	margin-bottom: 40px;
+	position: relative;
+	z-index: 2;
+}
+
+.about-footer{
+	position: relative;
+	z-index: 2;
+}
+
+.footer-links{
+	position: relative;
+	z-index: 2;
+}
+
+.footer-copyright{
+	position: relative;
+	z-index: 2;
 }
 
 .footer-logo img{
 	max-width: 180px;
+}
+
+.footer-asterisk-icon{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.asterisk-icon{
+	width: 24px;
+	height: 24px;
+	filter: brightness(0) invert(1);
+	transition: all 0.3s ease-in-out;
+}
+
+.asterisk-icon:hover{
+	filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(60deg);
+	transform: rotate(180deg);
+	opacity: 0.8;
+}
+
+/* Additional styling for asterisk icon */
+.footer-asterisk-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.asterisk-icon {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.asterisk-icon:active {
+	transform: scale(0.95);
 }
 
 .about-footer-content p{
@@ -5241,6 +5345,12 @@ header.main-header .header-sticky.active{
 		margin-right: 20px;
 	}
 
+	.marquee-asterisk{
+		width: 10px;
+		height: 10px;
+		margin-right: 6px;
+	}
+
 	.about-us{
 		padding: 50px 0 25px;
 	}
@@ -5571,6 +5681,12 @@ header.main-header .header-sticky.active{
 	.main-footer.bg-section{
 		padding: 50px 0 0;
 		margin-bottom: 0px;
+		background-size: cover, cover, 150px 150px;
+	}
+
+	.main-footer.bg-section::before,
+	.main-footer.bg-section::after {
+		display: none;
 	}
 
 	.about-footer{
@@ -6487,6 +6603,17 @@ header.main-header .header-sticky.active{
 
 	.footer-social-links{
 		text-align: center;
+	}
+
+	.footer-asterisk-icon{
+		text-align: center;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.asterisk-icon{
+		width: 20px;
+		height: 20px;
 	}
 
 	.page-header-box h1{

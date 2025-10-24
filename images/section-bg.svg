@@ -1,0 +1,42 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <!-- Gradient definitions -->
+  <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" style="stop-color:rgba(17,74,67,0.1);stop-opacity:1" />
+    <stop offset="100%" style="stop-color:rgba(17,74,67,0.3);stop-opacity:1" />
+  </radialGradient>
+  
+  <!-- Pattern for subtle texture -->
+  <pattern id="dotPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.05)"/>
+  </pattern>
+  
+  <!-- Grid pattern -->
+  <pattern id="gridPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
+  </pattern>
+  
+  <!-- Decorative circles -->
+  <pattern id="circlePattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+    <circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/>
+    <circle cx="50" cy="50" r="15" fill="none" stroke="rgba(255,255,255,0.01)" stroke-width="0.3"/>
+  </pattern>
+</defs>
+
+<!-- Background with gradient -->
+<rect width="200" height="200" fill="url(#bgGradient)"/>
+
+<!-- Apply patterns -->
+<rect width="200" height="200" fill="url(#dotPattern)"/>
+<rect width="200" height="200" fill="url(#gridPattern)"/>
+<rect width="200" height="200" fill="url(#circlePattern)"/>
+
+<!-- Decorative elements -->
+<circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+<circle cx="150" cy="150" r="30" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.8"/>
+<circle cx="100" cy="100" r="20" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/>
+
+<!-- Subtle lines for depth -->
+<line x1="0" y1="100" x2="200" y2="100" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/>
+<line x1="100" y1="0" x2="100" y2="200" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/>
+</svg>
