@@ -525,6 +525,53 @@ header.main-header{
 	position: relative;
 	z-index: 100;
 	box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	background: 
+		linear-gradient(135deg, rgba(216, 226, 140, 0.95) 0%, rgba(216, 226, 140, 0.9) 50%, rgba(216, 226, 140, 0.95) 100%),
+		url(../images/section-bg.svg);
+	background-repeat: no-repeat, repeat;
+	background-position: center, center;
+	background-size: cover, 200px 200px;
+	overflow: hidden;
+}
+
+/* Header decorative elements */
+header.main-header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: 
+		radial-gradient(circle at 30% 30%, rgba(17, 74, 67, 0.1) 0%, transparent 50%),
+		radial-gradient(circle at 70% 70%, rgba(17, 74, 67, 0.05) 0%, transparent 50%),
+		radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+	pointer-events: none;
+	z-index: 0;
+}
+
+header.main-header::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(-45deg, transparent 0%, rgba(255, 255, 255, 0.02) 25%, transparent 50%, rgba(255, 255, 255, 0.02) 75%, transparent 100%);
+	pointer-events: none;
+	z-index: 0;
+	animation: headerShimmer 6s ease-in-out infinite;
+}
+
+@keyframes headerShimmer {
+	0%, 100% {
+		opacity: 0.2;
+		transform: translateX(-100%);
+	}
+	50% {
+		opacity: 0.4;
+		transform: translateX(100%);
+	}
 }
 
 header.main-header .header-sticky{
@@ -533,6 +580,27 @@ header.main-header .header-sticky{
 	z-index: 100;
 	background-color: rgba(216, 226, 140, 0.95);
 	backdrop-filter: blur(10px);
+}
+
+/* Ensure header content is above decorative elements */
+.navbar{
+	position: relative;
+	z-index: 2;
+}
+
+.navbar-brand{
+	position: relative;
+	z-index: 2;
+}
+
+.main-menu{
+	position: relative;
+	z-index: 2;
+}
+
+.header-btn{
+	position: relative;
+	z-index: 2;
 }
 
 header.main-header .header-sticky.hide{
@@ -548,7 +616,12 @@ header.main-header .header-sticky.active{
 	right: 0;
 	border-radius: 0;
     transform: translateY(0);
-	background: var(--dark-color);
+	background: 
+		linear-gradient(135deg, rgba(17, 74, 67, 0.95) 0%, rgba(17, 74, 67, 0.9) 50%, rgba(17, 74, 67, 0.95) 100%),
+		url(../images/section-bg.svg);
+	background-repeat: no-repeat, repeat;
+	background-position: center, center;
+	background-size: cover, 200px 200px;
 	border-bottom: 1px solid var(--dark-divider-color);
 	backdrop-filter: blur(30px);
 	-webkit-backdrop-filter: blur(30px);
@@ -5225,6 +5298,15 @@ header.main-header .header-sticky.active{
     }
 
 	.header-btn{
+		display: none;
+	}
+
+	header.main-header{
+		background-size: cover, 150px 150px;
+	}
+
+	header.main-header::before,
+	header.main-header::after {
 		display: none;
 	}
 
