@@ -31,7 +31,18 @@
 	/* Slick Menu JS */
 	$('#menu').slicknav({
 		label : '',
-		prependTo : '.responsive-menu'
+		prependTo : '.responsive-menu',
+		duplicate: false
+	});
+	
+	/* Bootstrap Navbar Toggle */
+	$('.navbar-toggler').on('click', function() {
+		$(this).attr('aria-expanded', function(i, val) {
+			return val === 'true' ? 'false' : 'true';
+		});
+		
+		// Toggle the main menu visibility
+		$('.main-menu').toggleClass('show');
 	});
 
 	if($("a[href='#top']").length){
