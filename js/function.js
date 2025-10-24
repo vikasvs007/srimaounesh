@@ -31,8 +31,7 @@
 	/* Slick Menu JS */
 	$('#menu').slicknav({
 		label : '',
-		prependTo : '.responsive-menu',
-		duplicate: false
+		prependTo : '.responsive-menu'
 	});
 	
 	/* Bootstrap Navbar Toggle */

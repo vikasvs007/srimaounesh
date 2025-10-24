@@ -24,6 +24,8 @@
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<!-- Font Awesome Icon Css-->
 	<link href="css/all.css" rel="stylesheet" media="screen">
+	<!-- Font Awesome CDN as backup -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 	<!-- Animated Css -->
 	<link href="css/animate.css" rel="stylesheet">
     <!-- Magnific Popup Core Css File -->
@@ -62,7 +64,7 @@
     <!-- Page Header End -->
 
     <!-- Header Start -->
-	<header class="main-header" style="background:#d8e28c;">
+	<header class="main-header" style="background:#d8e28c; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
 		<div class="header-sticky">
 			<nav class="navbar navbar-expand-lg">
 				<div class="container">
@@ -73,22 +75,25 @@
 					<!-- Logo End -->
 
 					<!-- Main Menu Start -->
-                        <!-- Header Btn Start -->
-                        <div class="header-btn d-inline-flex">
-                        <div class="collapse navbar-collapse main-menu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>                                
-                                <li class="nav-item"><a class="nav-link" href="branches.html">Branches</a></li>
-                                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>                             
-                            </ul>
-                        </div>
-                        </div>
-                        <!-- Header Btn End -->
+					<div class="collapse navbar-collapse main-menu">
+						<div class="nav-menu-wrapper">
+							<ul class="navbar-nav mr-auto" id="menu">
+								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>                                
+								<li class="nav-item"><a class="nav-link" href="branches.html">Branches</a></li>
+								<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+								<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+								<li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>                             
+							</ul>
+						</div>
 					</div>
 					<!-- Main Menu End -->
+
+					<!-- Header Btn Start -->
+					<div class="header-btn d-inline-flex">
+						<!-- You can add a button here if needed, for example: -->
+						<!-- <a href="#" class="btn btn-primary">Action</a> -->
+					</div>
+					<!-- Header Btn End -->
 					<div class="navbar-toggle"></div>
 				</div>
 			</nav>
@@ -189,23 +194,23 @@
         <!-- Scrolling Ticker Start -->
         <div class="scrolling-ticker-box">
             <div class="scrolling-content">
-                <span><i class="fa-solid fa-asterisk"></i>Invest</span>
-                <span><i class="fa-solid fa-asterisk"></i>Loan</span>
-                <span><i class="fa-solid fa-asterisk"></i>Saving Account</span>
-                <span><i class="fa-solid fa-asterisk"></i>Bank Guarantee</span>
-                <span><i class="fa-solid fa-asterisk"></i>Business Loans</span>
-                <span><i class="fa-solid fa-asterisk"></i>Saving Account</span>
-                <span><i class="fa-solid fa-asterisk"></i>Loan</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Invest</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Loan</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Saving Account</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Bank Guarantee</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Business Loans</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Saving Account</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Loan</span>
             </div>
 
             <div class="scrolling-content">
-            <span><i class="fa-solid fa-asterisk"></i>Invest</span>
-                <span><i class="fa-solid fa-asterisk"></i>Loan</span>
-                <span><i class="fa-solid fa-asterisk"></i>Saving Account</span>
-                <span><i class="fa-solid fa-asterisk"></i>Bank Guarantee</span>
-                <span><i class="fa-solid fa-asterisk"></i>Loan</span>
-                <span><i class="fa-solid fa-asterisk"></i>Business Loans</span>
-                <span><i class="fa-solid fa-asterisk"></i>Saving Account</span>
+            <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Invest</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Loan</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Saving Account</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Bank Guarantee</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Loan</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Business Loans</span>
+                <span><img src="images/asterisk-icon.svg" alt="*" class="marquee-asterisk">Saving Account</span>
             </div>
         </div>
     </div>
@@ -488,7 +493,13 @@
                         <div class="footer-logo">
                             <img src="CPSSSN Logo.jpg" alt="">
                         </div>
-                        <!-- Footer Logo End -->             
+                        <!-- Footer Logo End -->
+                        
+                        <!-- Asterisk Icon Start -->
+                        <div class="footer-asterisk-icon">
+                            <img src="images/asterisk-icon.svg" alt="Asterisk Icon" class="asterisk-icon">
+                        </div>
+                        <!-- Asterisk Icon End -->             
                     </div>
                     <!-- About Footer End -->
                 </div>
@@ -503,7 +514,7 @@
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="branches.html">Our Branches</a></li>
                             <li><a href="services.html">services</a></li>
-                            <li><a href="contact.html">contact</a></li>
+                            <li><a href="contact.html">contact us </a></li>
                         </ul>
                     </div>
                     <!-- Footer Links End -->
@@ -525,10 +536,10 @@
                         <!-- Footer Social Link Start -->
                         <div class="footer-social-links">
                             <ul>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>
                         <!-- Footer Social Link End -->
